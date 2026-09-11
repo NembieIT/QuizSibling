@@ -1,0 +1,10 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "22"
+
+[context.production.environment]
+  # Thay bằng URL backend thật (vd Render) sau khi tạo service.
+  # VITE_API_URL = "https://quizletsibling-backend.onrender.com"
