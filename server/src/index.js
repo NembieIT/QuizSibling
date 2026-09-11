@@ -7,12 +7,7 @@ import setRoutes from './routes/setRoutes.js';
 const app = express();
 const PORT = process.env.PORT || 4000;
 
-const allowedOrigins = (process.env.CORS_ORIGIN || '')
-  .split(',')
-  .map((o) => o.trim())
-  .filter(Boolean);
-
-app.use(cors({ origin: allowedOrigins.length ? allowedOrigins : true }));
+app.use(cors({ origin: true }));
 app.use(express.json({ limit: '5mb' }));
 
 app.get('/', (req, res) =>
