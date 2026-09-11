@@ -5,6 +5,11 @@
 [build.environment]
   NODE_VERSION = "22"
 
+# SPA fallback: mọi đường dẫn client-side đều trả về index.html (tránh 404 khi refresh/deep-link)
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
 [context.production.environment]
-  # Thay bằng URL backend thật (vd Render) sau khi tạo service.
-  # VITE_API_URL = "https://quizletsibling-backend.onrender.com"
+  VITE_API_URL = "https://quizsibling.onrender.com"

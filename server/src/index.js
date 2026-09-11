@@ -15,6 +15,9 @@ const allowedOrigins = (process.env.CORS_ORIGIN || '')
 app.use(cors({ origin: allowedOrigins.length ? allowedOrigins : true }));
 app.use(express.json({ limit: '5mb' }));
 
+app.get('/', (req, res) =>
+  res.json({ app: 'QuizletSibling API', status: 'ok', endpoints: ['/api/sets', '/api/health'] })
+);
 app.get('/api/health', (req, res) => res.json({ status: 'ok' }));
 app.use('/api/sets', setRoutes);
 
