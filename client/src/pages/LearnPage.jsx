@@ -5,9 +5,9 @@ import { Alert, Loading } from '../components/ui.jsx'
 import { shuffle } from '../utils/helpers.js'
 import { addScore, getScores } from '../utils/progress.js'
 
-const MASTERY_LEVEL = 4
+const MASTERY_LEVEL = 3
 const DONT_KNOW = '__dont_know__'
-const LEVEL_COLORS = ['bg-slate-200', 'bg-sky-300', 'bg-blue-400', 'bg-indigo-500', 'bg-green-500']
+const LEVEL_COLORS = ['bg-slate-200', 'bg-sky-300', 'bg-blue-400', 'bg-green-500']
 
 const buildOptions = (set, index) => {
   if (!set) return []
